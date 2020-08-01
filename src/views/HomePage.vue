@@ -1,16 +1,28 @@
 <template>
-  <div>
-    <sideBar />
+  <div class="main">
+    <div class="sidebar"><SideBar /></div>
+    <p>
+      Some random text
+    </p>
   </div>
 </template>
 
 <script>
-import { sideBar } from "@/components/sideBar.vue";
+import sideBar from "@/components/sideBar.vue";
 export default {
+  name: "HomePage",
   components: {
-    sideBar: sideBar
+    SideBar: sideBar
   }
 };
 </script>
 
-<style></style>
+<style>
+.sidebar {
+  width: 400x;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+</style>
