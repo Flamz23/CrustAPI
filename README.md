@@ -4,6 +4,10 @@
 ```
 npm install
 ```
+## Start project
+```
+npm start
+```
 
 ### Compiles and hot-reloads for development
 ```
