@@ -1,28 +1,22 @@
 <template>
-  <div class="main">
-    <div class="sidebar"><SideBar /></div>
-    <p>
-      Some random text
-    </p>
+  <div class="flex main w-full h-screen bg-black-500">
+    <masthead />
+    <!-- <sideBar /> -->
   </div>
 </template>
 
 <script>
-import sideBar from "@/components/sideBar.vue";
+// import sideBar from "@/components/sideBar.vue";
+import Masthead from "@/components/masthead.vue";
+
 export default {
-  name: "HomePage",
+  name: "Masthead",
   components: {
-    SideBar: sideBar
-  }
+    masthead: Masthead,
+    // sideBar: sideBar,
+  },
 };
 </script>
 
 <style>
-.sidebar {
-  width: 400x;
-}
-.main {
-  display: flex;
-  flex-direction: row;
-}
 </style>

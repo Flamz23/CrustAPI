@@ -1,12 +1,14 @@
 <template>
   <div class="main">
-    <h1 class="title">Crust</h1>
+    <div class="fixed flex h-full w-full bg-gray-400">
+      <div class="inset-y-0 bg-gray-600 w-1/4">crust</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SideBar"
+  name: "SideBar",
 };
 </script>
 
