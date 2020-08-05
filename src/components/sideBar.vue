@@ -1,12 +1,17 @@
 <template>
-  <div class="main">
-    <h1 class="title">Crust</h1>
+  <div class="inset-y-0 bg-gray-600 w-1/4">
+    <div class="flex full">
+      <h3 class="mx-auto my-auto font-sans text-2xl">crust</h3>
+    </div>
+    <div class="flex full p-3">
+      <input class="mx-auto rounded w-full h-6" type="text" placeholder="Search..." />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SideBar"
+  name: "SideBar",
 };
 </script>
 
