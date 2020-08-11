@@ -13,8 +13,8 @@ export default {
   name: "HomePage",
   components: {
     masthead: Masthead,
-    sideBar: sideBar
-  }
+    sideBar: sideBar,
+  },
 };
 </script>
 

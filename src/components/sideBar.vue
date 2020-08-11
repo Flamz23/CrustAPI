@@ -1,25 +1,31 @@
 <template>
-  <div class="inset-y-0 bg-gray-600 w-1/4">
-    <div class="flex full p-3">
-      <input
-        class="mx-auto rounded w-full h-6 px-2 py-4"
-        type="text"
-        placeholder="Search..."
-      />
+  <div class="absolute flex h-full w-full">
+    <div class="inset-y-0 bg-gray-600 w-1/4">
+      <div class="flex full p-3">
+        <input
+          class="mx-auto rounded w-full h-6 px-2 py-4 outline-none"
+          type="text"
+          placeholder="Search..."
+        />
+      </div>
+      <div>
+        <actionHolder />
+      </div>
     </div>
-    <div>
-      <actionHolder />
-    </div>
+    <Workspace />
   </div>
 </template>
 
 <script>
 import actionHolder from "@/components/actionHolder.vue";
+import Workspace from "@/components/workspace.vue";
+
 export default {
   name: "SideBar",
   components: {
-    actionHolder
-  }
+    actionHolder,
+    Workspace,
+  },
 };
 </script>
 
