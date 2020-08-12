@@ -1,6 +1,6 @@
 <template>
-  <div class="absolute flex w-full">
-    <div class="inset-y-0 h-full pr-2">
+  <div class="flex w-full">
+    <div class="h-full pr-2">
       <div id="actionsHolder" class="bg-gray-600 overflow-y-scroll px-4 my-3">
         <draggable
           v-model="actions"
