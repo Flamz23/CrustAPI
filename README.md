@@ -47,6 +47,8 @@ npm run electron:build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 Before you install any more modules check the dependency tree via ```npm list```
 
+![](demo.gif)
+
 ### Actions already implemented
 
  - ~~Native notifications~~

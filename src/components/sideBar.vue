@@ -8,23 +8,21 @@
           placeholder="Search..."
         />
       </div>
-      <div>
-        <actionHolder />
-      </div>
+      <actionHolder />
     </div>
-    <Workspace />
+    <!-- <Workspace /> -->
   </div>
 </template>
 
 <script>
 import actionHolder from "@/components/actionHolder.vue";
-import Workspace from "@/components/workspace.vue";
+//import Workspace from "@/components/workspace.vue";
 
 export default {
   name: "SideBar",
   components: {
     actionHolder,
-    Workspace,
+    //Workspace,
   },
 };
 </script>
