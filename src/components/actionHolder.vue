@@ -1,6 +1,6 @@
 <template>
-  <div class="flex w-full">
-    <div class="h-full pr-2">
+  <div class="flex w-full" @dragover.prevent>
+    <div class="h-full w-1/4 pr-2">
       <div id="actionsHolder" class="bg-gray-600 overflow-y-scroll px-4 my-3">
         <draggable
           v-model="actions"
@@ -19,6 +19,7 @@
 <script>
 import draggable from "vuedraggable";
 import actions from "@/components/actions.vue";
+import usedActions from "@/components/usedAction.vue";
 
 export default {
   components: {
@@ -78,7 +79,7 @@ export default {
 
 <style>
 #actionsHolder {
-  height: 20rem;
+  height: 27rem;
 }
 ::-webkit-scrollbar {
   width: 10px;
