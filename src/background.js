@@ -3,6 +3,7 @@
 import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
+const electron = require('electron')
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -14,7 +15,7 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }
 ])
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
@@ -72,6 +73,35 @@ app.on('ready', async () => {
   }
   createWindow()
 })
+
+
+
+// receives the 'open-error-dialog' from the renderer process and shows the error box
+electron.ipcMain.on('open-error-dialog', (event, args) => {
+  var content = {
+    title: args[0],
+    message: args[1]
+  }
+  electron.dialog.showErrorBox(content.title, content.message)
+})
+
+// receives the 'open-info-dialog' from the renderer process and shows the error box
+electron.ipcMain.on('open-info-dialog', (event, args) => {
+  var content = {
+    type: args.type, // ["none", "info", "error", "question", "warning"]
+    title: args.title,
+    buttons: args.buttons,
+    defaultId: args.defaultId,
+    message: args.message,
+    detail: args.detail
+  }
+  electron.dialog.showMessageBox(content, (index) => {
+    event.reply('open-info-dialog-response', index)
+  })
+})
+
+
+
 
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {
