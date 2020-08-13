@@ -1,11 +1,10 @@
 <template>
   <div class="bg-gray-700 w-full">
     <draggable v-model="usedActionsList" :group="{name: 'actions-list'}" :animation="200">
-      <div v-for="usedAction in usedActionsList" :key="usedAction.id">
-        <usedActions :name="usedAction" />
+      <div v-for="usedActionInstance in usedActionsList" :key="usedActionInstance.id">
+        <usedActions :action="usedActionInstance" />
       </div>
     </draggable>
-    <div v-if="!usedActionsList.get">Drag something here to start making stuff !</div>
   </div>
 </template>
 
