@@ -1,8 +1,12 @@
 <template>
-  <div class="flex main w-full h-screen bg-black-500">
-    <sideBar />
-    <masthead />
-    <workspace />
+  <div class="h-screen flex max-h-screen max-w-screen">
+    <div class="absolute h-full">
+      <sideBar />
+    </div>
+    <div class="ml-64 flex w-full flex-col">
+      <masthead />
+      <workspace />
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full" @dragover.prevent>
-    <div class="h-full w-1/4 pr-2">
+    <div class="h-full pr-2">
       <div id="actionsHolder" class="bg-gray-600 overflow-y-scroll px-4 my-3">
         <draggable
           v-model="actions"
