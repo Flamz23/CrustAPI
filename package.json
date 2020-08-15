@@ -22,6 +22,7 @@
 		"vuedraggable": "^2.24.0",
 		"vuex": "^3.4.0",
 		"win-brightness": "^1.0.0"
+
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.4.0",
