@@ -1,6 +1,8 @@
 <template>
   <div class="bg-gray-700 w-full">
-    <draggable v-model="usedActionsList" :group="{name: 'actions-list'}" :animation="200">
+    <draggable :list="usedActionsList" :group="{name: 'actions-list'}" :animation="200">
+      <!-- works better with list rather than v-model -->
+      <!--v-model="usedActionsList"-->
       <div v-for="usedActionInstance in usedActionsList" :key="usedActionInstance.id">
         <usedActions :action="usedActionInstance" />
       </div>
@@ -26,7 +28,7 @@ export default {
         return this.$store.getters.getUsedActions;
       },
       set(value) {
-        this.$store.commit("changeUsedActions", value);
+        this.$store.commit("changeUsedActions", value[value.length - 1]);
       },
     },
   },

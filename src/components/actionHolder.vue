@@ -3,10 +3,13 @@
     <div class="h-full pr-2">
       <div id="actionsHolder" class="bg-gray-600 overflow-y-scroll px-4 my-3">
         <draggable
-          v-model="actions"
+          :list="actions"
           :group="{name: 'actions-list', pull: 'clone', put: 'false'}"
           :sort="false"
         >
+          <!--:clone="genNewId(el)"-->
+          <!-- works better with list rather than v-model -->
+          <!--v-model="actions"-->
           <div v-for="action in actions" :key="action.id">
             <actions :action="action" />
           </div>
@@ -64,16 +67,29 @@ export default {
           id: 7,
         },
       ],
-      usedActions: [
-        {
-          name: "Text",
-          desc: "A simple text field to enter info",
-          id: 2,
-        },
-      ],
+
+      // not needed
+
+      // usedActions: [
+      //   {
+      //     name: "Text",
+      //     desc: "A simple text field to enter info",
+      //     id: 2,
+      //   },
+      // ],
     };
   },
-  methods: {},
+  methods: {
+    genNewId: function (el) {
+      // let s = el.id * Math.random();
+      // return {
+      //   name: el.name
+      //   id: el.id
+      // };
+      console.log(gennew);
+      return el;
+    },
+  },
 };
 </script>
 
