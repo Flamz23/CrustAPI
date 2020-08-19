@@ -20,11 +20,18 @@ function createWindow() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 800,
+    minHeight: 600,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION
     }
+  })
+
+  win.on('resize', () => {
+    const win_size = `width: ${win.getSize()[0]}, height: ${win.getSize()[1]}`
+    console.log(win_size);
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -37,10 +44,19 @@ function createWindow() {
     win.loadURL('app://./index.html')
   }
 
+
   win.on('closed', () => {
     win = null
   })
 }
+
+
+
+
+
+
+
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
@@ -76,6 +92,15 @@ app.on('ready', async () => {
 
 
 
+
+
+
+
+
+
+
+
+
 // receives the 'open-error-dialog' from the renderer process and shows the error box
 electron.ipcMain.on('open-error-dialog', (event, args) => {
   var content = {
@@ -99,9 +124,6 @@ electron.ipcMain.on('open-info-dialog', (event, args) => {
     event.reply('open-info-dialog-response', index)
   })
 })
-
-
-
 
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {

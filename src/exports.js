@@ -69,10 +69,10 @@ class Crust {
     }
 
     clipboard() {
-        this.set = function (content) {
+        this.clipboard.set = function (content) {
             electron.clipboard.writeText(content)
         }
-        this.get = function () { }
+        this.clipboard.get = function () { }
     }
 
     sound() {
