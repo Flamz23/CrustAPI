@@ -1,3 +1,5 @@
+<!--I just realizes this makes absolutely no sense
+    PLS when you have the time make it a component sidebar that opens on the right-->
 <template>
   <div class="fixed w-full h-full flex flex-col">
     <div class="w-full flex h-10 bg-gray-500">

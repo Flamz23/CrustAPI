@@ -28,7 +28,7 @@ export default {
         return this.$store.getters.getUsedActions;
       },
       set(value) {
-        this.$store.commit("changeUsedActions", value[value.length - 1]);
+        this.$store.commit("changeUsedActions", value);
       },
     },
   },

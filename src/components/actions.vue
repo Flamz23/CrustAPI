@@ -5,7 +5,7 @@
     >
       <!-- Change the height of the button to accommodate for smaller screens.-->
       <p class="mx-auto text-center text-md md:text-lg text-gray-700">{{action.name}}</p>
-      <p class="mx-auto text-gray-500 text-sm w-full invisible lg:visible">{{ action.desc }}</p>
+      <p class="mx-auto text-gray-500 text-sm w-full hidden lg:flex">{{ action.desc }}</p>
     </button>
   </div>
 </template>

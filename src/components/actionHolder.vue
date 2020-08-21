@@ -35,6 +35,7 @@ export default {
         {
           name: "Text",
           desc: "A simple text field to enter info",
+          type: "text",
           id: 2,
         },
         {
@@ -45,25 +46,31 @@ export default {
         {
           name: "Brightness",
           desc: "Get and set the brightness of your computer",
+          type: "range",
           id: 3,
         },
         {
           name: "Volume",
           desc: "Get and Set your device volume",
+          type: "range",
           id: 4,
         },
         {
           name: "Info",
           desc: "Set up a mock information dialog for error messages",
+          type: "text",
           id: 5,
         },
         {
           name: "Error",
           desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
+          type: "text",
           id: 6,
         },
         {
           name: "Seventh Actions",
+          desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
+          type: "text",
           id: 7,
         },
       ],
