@@ -4,7 +4,7 @@
  - ~~settings router~~
  - settings hover overlay[not doing anymore]
  - ~~settings.js~~
- - change settings to css sidebar instead of router
+ - ~~change settings to css sidebar instead of router~~
  - ~~fix vuex bugs~~
  - Each action on the page should generate hash map or at least be able to know its position in workspace
  - Actions with inputs and values should automatically v-model their data into the workspace array

@@ -1,4 +1,4 @@
-<!--I just realizes this makes absolutely no sense
+<!--I just realized this makes absolutely no sense
     PLS when you have the time make it a component sidebar that opens on the right-->
 <template>
   <div class="fixed w-full h-full flex flex-col">

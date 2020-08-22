@@ -1,8 +1,6 @@
-const App = {
+module.exports = {
     screensize: {
         width: [],
         height: []
     }
 }
-
-module.exports.App = App
