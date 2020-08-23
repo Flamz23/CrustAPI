@@ -31,47 +31,76 @@ export default {
   },
   data() {
     return {
+      // this needs its own file....I added a data object to each one
       actions: [
         {
           name: "Text",
           desc: "A simple text field to enter info",
           type: "text",
           id: 2,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Notification",
           desc: "Set up mock notifications for your computer",
           id: 1,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Brightness",
           desc: "Get and set the brightness of your computer",
           type: "range",
           id: 3,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Volume",
           desc: "Get and Set your device volume",
           type: "range",
           id: 4,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Info",
           desc: "Set up a mock information dialog for error messages",
           type: "text",
           id: 5,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Error",
           desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
           type: "text",
           id: 6,
+          data: {
+            input: "",
+            output: "",
+          },
         },
         {
           name: "Seventh Actions",
           desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
           type: "text",
           id: 7,
+          data: {
+            input: "",
+            output: "",
+          },
         },
       ],
 

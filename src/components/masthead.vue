@@ -30,6 +30,7 @@
         style="enable-background:new 0 0 478.703 478.703;"
         xml:space="preserve"
         class="h-full w-8 p-1 mr-3 fill-current text-gray-600 hover:text-gray-900"
+        @click="drawer()"
       >
         <g>
           <g>
@@ -79,15 +80,43 @@
         <g />
       </svg>
     </div>
+    <div class="fixed">
+      <div
+        class="fixed top-0 right-0 h-full w-full bg-black opacity-50 overflow-auto ease-in-out transition-all duration-500 z-29"
+        :class="isClosed ? 'hidden' : 'flex'"
+        @click="drawer"
+      ></div>
+      <aside
+        class="transform top-0 right-0 w-3/12 bg-gray-400 fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
+        :class="isClosed ? 'translate-x-full' : '-translate-x-0'"
+      >
+        <button
+          class="bg-blue-500 m-2 focus:outline-none float-right rounded-lg p-1 text-gray-200"
+          @click="drawer()"
+        >close (x)</button>
+        <div class="h-48 w-3/4 overflow-scroll bg-white mx-auto mt-40">setings: {{settings}}</div>
+      </aside>
+    </div>
   </div>
 </template>
 
 <script>
+import settings from "../../public/.config/settings";
 export default {
   name: "Masthead",
+  data() {
+    return {
+      isClosed: true,
+      settings: settings,
+    };
+  },
   methods: {
     dol: () => {
-      console.log("jd");
+      console.log(settings.name);
+    },
+    drawer() {
+      this.isClosed = !this.isClosed;
+      console.log("drawer");
     },
   },
 };

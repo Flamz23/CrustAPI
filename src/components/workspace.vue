@@ -1,11 +1,18 @@
 <template>
-  <div class="bg-gray-700 w-full">
-    <draggable :list="usedActionsList" :group="{name: 'actions-list'}" :animation="200">
+  <div class="w-full mt-8 px-16">
+    <draggable
+      :list="usedActionsList"
+      :group="{name: 'actions-list'}"
+      :animation="200"
+      ghostClass="ghost"
+      emptyInsertThreshold: 15
+    >
       <!-- works better with list rather than v-model -->
       <!--v-model="usedActionsList"-->
       <div v-for="usedActionInstance in usedActionsList" :key="usedActionInstance.id">
         <usedActions :action="usedActionInstance" />
       </div>
+      <div slot="footer" class="bg-gray-400 py-2 px-16 pr-20 w-11/12 mx-auto rounded-lg hover:shadow-outline">Add</div>
     </draggable>
   </div>
 </template>
