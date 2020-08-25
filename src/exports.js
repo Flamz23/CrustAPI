@@ -5,7 +5,7 @@ const bright = require('win-brightness');
 const nircmd = require('./../node_modules/nircmd')
 
 
-class Crust {
+export default class Crust {
     constructor() {
 
     }
@@ -101,4 +101,3 @@ function range(oldInput, oldMin, oldMax, newMin, newMax) {
     return d1 + newMin;
 }
 
-module.exports.crust = Crust

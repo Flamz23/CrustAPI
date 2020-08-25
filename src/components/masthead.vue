@@ -102,6 +102,9 @@
 
 <script>
 import settings from "../../public/.config/settings";
+import act from "@/actions.js";
+import controller from "@/controller.js";
+
 export default {
   name: "Masthead",
   data() {
@@ -112,7 +115,7 @@ export default {
   },
   methods: {
     dol: () => {
-      console.log(settings.name);
+      new controller(act);
     },
     drawer() {
       this.isClosed = !this.isClosed;

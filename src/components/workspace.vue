@@ -12,7 +12,7 @@
       <div v-for="usedActionInstance in usedActionsList" :key="usedActionInstance.id">
         <usedActions :action="usedActionInstance" />
       </div>
-      <div slot="footer" class="bg-gray-400 py-2 px-16 pr-20 w-11/12 mx-auto rounded-lg hover:shadow-outline">Add</div>
+      <div slot="footer" class="bg-gray-400 py-2 my-2 mx-auto mr-12 ml-12 rounded-lg hover:shadow-outline">Add</div>
     </draggable>
   </div>
 </template>
