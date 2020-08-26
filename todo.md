@@ -11,5 +11,7 @@
  - Array should be converted to a linked list types for the input and output
  - native or in-app error reporting with css
  - error logging with fs
- - configure action json better
- - import static array of actions
+ - ~~configure action json better~~
+ - ~~import static array of actions~~
+ - Fix vue-cli webpack error with nodeEnv and fs
+ - Uninstall path and fs
