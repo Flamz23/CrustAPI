@@ -36,7 +36,7 @@ export default class Controller {
         actions.forEach(action => {
             switch (action.funct) {
                 case "NOTIFICATION":
-                    f.notify('jbh', 'gygyh');
+                    f.notify(['ff', 'sdsd']);
                     break;
                 case "TEXT":
 
