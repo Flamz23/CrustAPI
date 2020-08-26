@@ -1,8 +1,8 @@
-const electron = require("electron")
-const path = require('path');
-const os = require('os');
-const bright = require('win-brightness');
-const nircmd = require('./../node_modules/nircmd')
+const electron = window.require("electron")
+const path = window.require('path');
+const os = window.require('os');
+const bright = window.require('win-brightness');
+const nircmd = window.require('./../node_modules/nircmd')
 
 
 export default class Crust {

@@ -2,7 +2,7 @@
 /*
     This code has never been tested 
 */
-//import actionFunctions from "@/exports.js"
+import actionFunctions from "@/exports.js"
 
 
 export default class Controller {
@@ -40,8 +40,8 @@ export default class Controller {
         actions.forEach(action => {
             switch (action.funct) {
                 case "NOTIFICATION":
-                    //new actionFunctions.notify('Head', 'Body')
-                    console.log("hsjjdkcsk");
+                    new actionFunctions.notify('Head', 'Body')
+                    console.log("notify");
                     break;
                 case "TEXT":
 

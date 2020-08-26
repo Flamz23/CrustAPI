@@ -1,7 +1,9 @@
 module.exports = {
     pluginOptions: {
         electronBuilder: {
-            nodeIntegration: true
+            externals: ['path', 'fs'],
+            nodeIntegration: true,
+            nodeModulesPath: ['./node_modules']
         }
     }
 }
