@@ -1,18 +1,14 @@
-// If you can import the workspace array from vue and feed this
-/*
-    This code has never been tested 
-*/
-import actionFunctions from "@/exports.js"
+import actionFunctions from "@/windowsApi.js"
 
 
 export default class Controller {
     constructor(actionArray) {
         this.input = actionArray
-        console.log(this.verif());
+        this.verif();
         this.run();
     }
 
-    // checks whether input array is complete or has missing propeerties
+    // checks whether input array is complete or has missing properties
     verif() {
         const actions = this.input
         if (!(Array.isArray(actions))) {
@@ -36,12 +32,11 @@ export default class Controller {
 
     run() {
         const actions = this.input
-
+        var f = new actionFunctions()
         actions.forEach(action => {
             switch (action.funct) {
                 case "NOTIFICATION":
-                    new actionFunctions.notify('Head', 'Body')
-                    console.log("notify");
+                    f.notify('jbh', 'gygyh');
                     break;
                 case "TEXT":
 

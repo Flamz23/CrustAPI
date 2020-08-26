@@ -31,7 +31,7 @@ function createWindow() {
 
   win.on('resize', () => {
     const win_size = `width: ${win.getSize()[0]}, height: ${win.getSize()[1]}`
-    console.log(win_size);
+    //console.log(win_size);
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
