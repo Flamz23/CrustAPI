@@ -1,64 +1,56 @@
-import actionFunctions from "@/windowsApi.js"
-
+import actionFunctions from "@/windowsApi.js";
 
 export default class Controller {
-    constructor(actionArray) {
-        this.input = actionArray
-        this.verif();
-        this.run();
+  constructor(actionArray) {
+    this.input = actionArray;
+    this.verif();
+    this.run();
+  }
+
+  // checks whether input array is complete or has missing properties
+  verif() {
+    const actions = this.input;
+    if (!Array.isArray(actions)) {
+      //throw proper error
+      throw "Input is not of type array";
     }
-
-    // checks whether input array is complete or has missing properties
-    verif() {
-        const actions = this.input
-        if (!(Array.isArray(actions))) {
-            //throw proper errorr
-            throw "Input is not of type array";
-        }
-        // filters out object in the array that have missing properties
-        const check = actions.filter(action => {
-            //let check = action.name || action.type || action.id
-            if (!(action.name && action.funct && action.id)) {
-                return true
-            } else { return false }
-        })
-
-        if (check.length !== 0) {
-            console.error(`objects at ${JSON.stringify(check)} have missing properties`)
-            return false
-        }
+    // filters out object in the array that have missing properties
+    const check = actions.filter(action => {
+      //let check = action.name || action.type || action.id
+      if (!(action.name && action.funct && action.id)) {
         return true;
+      } else {
+        return false;
+      }
+    });
+
+    if (check.length !== 0) {
+      console.error(
+        `objects at ${JSON.stringify(check)} have missing properties`
+      );
+      return false;
     }
+    return true;
+  }
 
-    run() {
-        const actions = this.input
-        var f = new actionFunctions()
-        actions.forEach(action => {
-            switch (action.funct) {
-                case "NOTIFICATION":
-                    f.notify(['ff', 'sdsd']);
-                    break;
-                case "TEXT":
-
-                    break;
-            }
-        });
-    }
-
+  run() {
+    const actions = this.input;
+    var f = new actionFunctions();
+    actions.forEach(action => {
+      switch (action.funct) {
+        case "NOTIFICATION":
+          f.notify(["ff", "sdsd"]);
+          break;
+        case "TEXT":
+          break;
+      }
+    });
+  }
 }
-
-
-
-
-
-
-
-
 
 // /*
 //  *Shamelessly stolen from https://medium.com/javascript-in-plain-english/implementing-a-linked-list-in-javascript-3f71c83487b5
 //  */
-
 
 // class LinkedListNode {
 //     constructor(value, next) {
