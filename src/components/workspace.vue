@@ -30,6 +30,7 @@ export default {
     return {};
   },
   computed: {
+    // the spread operator might be easier on the eyes
     usedActionsList: {
       get() {
         // refer to https://www.ictshore.com/javascript/vuex-modules-tutorial/

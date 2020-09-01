@@ -6,7 +6,16 @@ Vue.use(Vuex);
 const cssStoreModule = {
   namespaced: true,
   state: {
-    colors: []
+    // I honestly dont know if this is a good way to do this
+
+    global: {
+      sideBarcolor: 'bg-gray-700'
+    }
+  },
+  getters: {
+    getColors(state) {
+      return state.global
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full">
-    <div class="inset-y-0 bg-gray-600 w-64">
+    <div class="inset-y-0 w-64" :class="color.sideBarcolor">
       <div class="flex p-3">
         <input
           class="mx-auto rounded w-full h-6 px-2 py-4 outline-none focus:border-teal-400 border-2"
@@ -21,6 +21,12 @@ export default {
   components: {
     actionHolder,
     //Workspace,
+  },
+  computed: {
+    color: function () {
+      // colors are now stored in vuex in cssStoreModule module
+      return this.$store.getters["cssStoreModule/getColors"];
+    },
   },
 };
 </script>
