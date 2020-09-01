@@ -9,7 +9,7 @@ const cssStoreModule = {
     // I honestly dont know if this is a good way to do this
 
     global: {
-      sideBarcolor: 'bg-gray-700'
+      sideBarcolor: 'bg-gray-600'
     }
   },
   getters: {

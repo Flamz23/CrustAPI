@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     color: function () {
-      // colors are now stored in vuex in cssStoreModule module
+      // colors are now stored in vuex in the cssStoreModule module
       return this.$store.getters["cssStoreModule/getColors"];
     },
   },
