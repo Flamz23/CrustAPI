@@ -32,10 +32,12 @@ export default {
   computed: {
     usedActionsList: {
       get() {
-        return this.$store.getters.getUsedActions;
+        // refer to https://www.ictshore.com/javascript/vuex-modules-tutorial/
+        return this.$store.getters['actionStoreModule/getUsedActions'];
       },
       set(value) {
-        this.$store.commit("changeUsedActions", value);
+         // refer to https://www.ictshore.com/javascript/vuex-modules-tutorial/
+        this.$store.commit("actionStoreModule/changeUsedActions", value);
       },
     },
   },

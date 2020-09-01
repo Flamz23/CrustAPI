@@ -3,16 +3,21 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const cssStoreModule = {
+  namespaced: true,
+  state: {
+    colors: []
+  }
+}
+
+const actionStoreModule = {
+  namespaced: true,
   state: {
     usedActions: []
   },
   mutations: {
     changeUsedActions(state, usedActions) {
       state.usedActions.push(usedActions);
-
-      // not needed
-      //state.usedActions = [...state.usedActions, usedActions[0]]
     }
   },
   actions: {
@@ -25,5 +30,12 @@ export default new Vuex.Store({
       return state.usedActions;
     }
   },
-  modules: {}
+}
+
+export default new Vuex.Store({
+
+  modules: {
+    cssStoreModule,
+    actionStoreModule
+  }
 });

@@ -13,5 +13,9 @@
  - error logging with fs
  - ~~configure action json better~~
  - ~~import static array of actions~~
- - Fix vue-cli webpack error with nodeEnv and fs
- - Uninstall path and fs
+ - ~~Fix vue-cli webpack error with nodeEnv and fs~~
+ - ~~Uninstall path and fs~~
+ - split vuex into modules
+ - make component styles global
+ - finish setting up controller.js
+ = finish up settings vueand routers
