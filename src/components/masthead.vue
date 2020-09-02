@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-200 h-10 w-full inline">
+  <div class="h-10 w-full inline" :class="color.mastColor">
     <div class="flex float-right h-full">
       <button
         class="flex w-16 bg-blue-500 my-2 rounded-md mr-3 hover:bg-blue-400 focus:outline-none"
@@ -120,6 +120,12 @@ export default {
     drawer() {
       this.isClosed = !this.isClosed;
       console.log("drawer");
+    },
+  },
+  computed: {
+    color: function () {
+      // colors are now stored in vuex in the cssStoreModule module
+      return this.$store.getters["cssStoreModule/getColors"];
     },
   },
 };

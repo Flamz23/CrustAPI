@@ -7,9 +7,9 @@ const cssStoreModule = {
   namespaced: true,
   state: {
     // I honestly dont know if this is a good way to do this
-
     global: {
-      sideBarcolor: 'bg-gray-600'
+      sideBarcolor: 'bg-gray-600',
+      mastColor: 'bg-gray-300'
     }
   },
   getters: {

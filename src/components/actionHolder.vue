@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full" @dragover.prevent>
     <div class="h-full pr-2">
-      <div id="actionsHolder" class="bg-gray-600 overflow-y-scroll px-4 my-3">
+      <div id="actionsHolder" class="overflow-y-scroll px-4 my-3" :class="color.sideBarcolor">
         <draggable
           :list="actions"
           :group="{name: 'actions-list', pull: 'clone', put: 'false'}"
@@ -44,6 +44,12 @@ export default {
       // };
       console.log(gennew);
       return el;
+    },
+  },
+  computed: {
+    color: function () {
+      // colors are now stored in vuex in the cssStoreModule module
+      return this.$store.getters["cssStoreModule/getColors"];
     },
   },
 };
