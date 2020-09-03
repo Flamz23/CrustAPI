@@ -4,7 +4,6 @@
       :list="usedActionsList"
       :group="{name: 'actions-list'}"
       :animation="200"
-      ghostClass="ghost"
       emptyInsertThreshold: 15
     >
       <!-- works better with list rather than v-model -->

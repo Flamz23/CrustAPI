@@ -57,7 +57,6 @@ function createWindow() {
 
 
 
-
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // On macOS it is common for applications and their menu bar
@@ -87,6 +86,12 @@ app.on('ready', async () => {
     } catch (e) {
       console.error('Vue Devtools failed to install:', e.toString())
     }
+  }
+  try {
+    await installExtension(VUEJS_DEVTOOLS)
+    console.log(`Added Extension:  ${name}`)
+  } catch (e) {
+    console.error('Vue Devtools failed to install:', e.toString())
   }
   createWindow()
 })

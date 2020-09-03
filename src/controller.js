@@ -1,6 +1,6 @@
 // the input (actionArray) is defined in the dol method in masthead.vue
-import winApi from "@/windowsApi.js"
-import link from "@/LinkedList.js"
+import winapi from "@/winapi.js"
+import link from "@/linkedlist.js"
 
 
 export default class Controller {
@@ -36,30 +36,32 @@ export default class Controller {
     }
 
     run() {
-        const actions = this.input
-        var api = new winApi()
-
-        // this is for testing... will add foreach method later
-        // loops through linked list logging all the nodes
+        var wapi = new winapi()
         let current = this.LinkedList.head;
-        while (current.next) {
-            console.log(current);
-            current = current.next;
-        }
-        console.log(current);
 
-        //
+        this.LinkedList.loop((val) => {
+            switch (val.value.funct) {
+                case "NOTIFICATION":
+                    wapi.notify(['ff', 'sdsd']);
+                    break;
+                case "TEXT":
 
-        // actions.forEach(action => {
-        //     switch (action.funct) {
-        //         case "NOTIFICATION":
-        //             f.notify(['ff', 'sdsd']);
-        //             break;
-        //         case "TEXT":
-
-        //             break;
-        //     }
-        // });
+                    break;
+            }
+        });
     }
 
 }
+
+
+
+
+
+
+// this is for testing... will add foreach method later
+// loops through linked list logging all the nodes
+// while (current.next) {
+        //     console.log(current);
+        //     current = current.next;
+        // }
+        // console.log(current);

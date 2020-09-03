@@ -25,6 +25,7 @@ export default class Link {// doubly
         return this;
     }
 
+    // inserts "value" at the head of the linkedlist shifting the entire list once
     prepend(value) {// doubly
         this.size += 1;
         const newNode = new LinkedListNode(value, this.head);
@@ -37,6 +38,7 @@ export default class Link {// doubly
         return this;
     }
 
+    // inserts "value" at the tail of a linked list
     append(value) {// doubly
         this.size += 1;
         const newNode = new LinkedListNode(value);
@@ -51,11 +53,13 @@ export default class Link {// doubly
         return this;
     }
 
+    // converts an array into a linked list
     fromArray(values) {// doubly
         values.forEach(value => this.append(value));
         return this;
     }
 
+    // converts linked list to an array {useNodes determines whether references to other nodes ahould be included}
     toArray(useNodes = false) {// doubly
         const nodes = [];
         let currentNode = this.head;
@@ -172,8 +176,19 @@ export default class Link {// doubly
         return undefined;
     }
 
-    length() {
+    // returns length of list
+    length() {// doubly
         return this.size;
+    }
+
+    // loops thrrough linked list accapting a callback as its parameter
+    loop(fn) {// doubly
+        let current = this.head;
+        while (current.next) {
+            fn(current)
+            current = current.next;
+        };
+        fn(current);
     }
 
 }
