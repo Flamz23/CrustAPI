@@ -1,5 +1,5 @@
 <template>
-  <div class="h-10 w-full inline" :class="color.mastColor">
+  <div class="h-10 w-full inline shadow-md" :class="color.mastColor">
     <div class="flex float-right h-full">
       <button
         class="flex w-16 bg-blue-500 my-2 rounded-md mr-3 hover:bg-blue-400 focus:outline-none"

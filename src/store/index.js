@@ -10,7 +10,7 @@ const cssStoreModule = {
     global: {
       sideBarcolor: 'bg-gray-700',
       mastColor: 'bg-gray-300',
-      actionHolderColor: 'bg-gray-400'
+      actionHolderColor: 'bg-gray-300'
     }
   },
   getters: {
