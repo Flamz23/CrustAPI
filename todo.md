@@ -7,8 +7,8 @@
  - ~~change settings to css sidebar instead of router~~
  - ~~fix vuex bugs~~
  - Each action on the page should generate hash or at least be able to know its position in workspace
- - Actions with inputs and values should automatically v-model their data into the workspace array
- - Array should be converted to a linked list types for the input and output
+ - Actions with inputs and values should automatically v-model or pass their data into the workspace array
+ - ~~Array should be converted to a linked list types for the input and output~~
  - native or in-app error reporting with css
  - error logging with fs
  - ~~configure action json better~~
@@ -19,3 +19,14 @@
  - ~~make component styles global~~
  - finish setting up controller.js
  - finish up settings vue and tabs
+ - Build model ui in figma
+ - set up app interface based on figma model
+ - fix yet another issue with usedAction array (draggable works but state doesn't change)
+ - split store modules into separate files
+ - extend tailwind colors with figma model
+ - clean up app tree (might be best to put all the js files into one folder)...probs set up yet another constant module that exports each file's location 
+ - Tests???
+ - set up meaningful keys for actions in the workspace
+ - Parse/Create i/o controller.js
+ - i/o type checking controller.js
+ - array mutations (filter) for action holder array

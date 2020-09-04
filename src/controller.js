@@ -35,21 +35,56 @@ export default class Controller {
         return true;
     }
 
+    checkType(value) {
+        const content = value;
+
+        if (Array.isArray(content)) {
+            return "array";
+        } else {
+            return typeof content;
+        }
+
+    }
+
     run() {
-        var wapi = new winapi()
+        // dont run the program immediately
+        const wapi = new winapi()
+        const arraytodo = []
         let current = this.LinkedList.head;
+
 
         this.LinkedList.loop((val) => {
             switch (val.value.funct) {
                 case "NOTIFICATION":
-                    wapi.notify(['ff', 'sdsd']);
+                    arraytodo.push(wapi.notify(['HEAD', 'BODY']));
                     break;
                 case "TEXT":
 
                     break;
+                case "BRIGHTNESS":
+                    arraytodo.push(wapi.brightness(0.25))
+                    break;
+                case "VOLUME":
+
+                    break;
+                case "INFO":
+                    arraytodo.push(wapi.showError(['HEAD', 'BODY']));
+                    break;
+                case "ERROR":
+
+                    break;
+                case "S_ACTION":
+
+                    break;
             }
         });
+
+        Promise.all(arraytodo).then(() => {
+            console.log("done!");
+        })
     }
+
+
 
 }
 

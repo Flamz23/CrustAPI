@@ -65,7 +65,7 @@ const action = [{
 },
 {
     name: "Seventh Actions",
-    funct: "TEXT",
+    funct: "S_ACTION",
     desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
     type: "text",
     id: 7,
@@ -75,4 +75,4 @@ const action = [{
     },
 }]
 
-module.exports = action
+export default action

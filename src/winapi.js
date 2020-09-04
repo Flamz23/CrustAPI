@@ -15,8 +15,8 @@ export default class Crust {
             return console.error(`${content} is not an array @notify`);
         }
         const notification = {
-            title: content[0],
-            body: content[1]
+            title: content[0].toString(),
+            body: content[1].toString()
         }
         if (content.length > 2) {
             notification.icon = path.join(__dirname, content[2])
@@ -43,27 +43,26 @@ export default class Crust {
         return sysInfo;
     }
 
-    showError(content) {
+    async showError(content) {
         if (!content) {
             return console.error("content is undefined @ showError")
         }
         // content should be an array [title, message]
-        electron.ipcRenderer.send('open-error-dialog', content)
-        console.log(content)
+        await electron.ipcRenderer.send('open-error-dialog', content);
     }
 
-    showAlert(content) {
+    async showAlert(content) {
         if (!content) {
             return console.error(`content "${content}" is undefined @ showAlert`)
         }
         // content is an object {type, title, buttons, defaultId, messages, detail}
-        electron.ipcRenderer.send('open-info-dialog', content)
+        await electron.ipcRenderer.send('open-info-dialog', content)
     }
 
-    brightness(content) {
+    async brightness(content) {
         // returns the brightness contentue as a value betwween 0 and 1
         if (!content) {
-            return bright.get(function (err, brightness) {
+            return await bright.get(function (err, brightness) {
                 if (err) { console.error(err) }
                 return brightness
             })
@@ -71,10 +70,10 @@ export default class Crust {
 
         // sets the brightness a specific value (note: input isn't sanitized)
         const brightnessValue = content
-        if (brightnessValue > 100 || brightnessValue < 0 || typeof brightnessValue !== Number) {
-            return console.error(`TypeError: content "${content}" @ brightness`)
+        if ((brightnessValue > 100) || (brightnessValue < 0) || (typeof brightnessValue !== "number")) {
+            return console.error(`TypeError: content "${typeof content}" @ brightness`)
         }
-        bright.set(input, function (err) {
+        await bright.set(content, function (err) {
             if (err) { console.error(err) }
         })
     }
