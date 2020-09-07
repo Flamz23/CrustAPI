@@ -2,7 +2,7 @@
   <div>
     <!-- action holder buttons -->
     <button
-      class="h-20 w-full mb-3 p-1 rounded focus:outline-none hover:bg-gray-800 shadow hover:"
+      class="h-20 w-full mb-3 p-1 rounded focus:outline-none hover:bg-gray-600 shadow hover:"
       :class="color.actionHolderColor"
     >
       <div class="flex pb-1">

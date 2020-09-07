@@ -5,7 +5,7 @@
         :list="usedActionsList"
         :group="{name: 'actions-list'}"
         :animation="200"
-        ghost-class="ghost"
+        ghost-class="animate-pulse"
       >
         <!--v-model="usedActionsList"-->
         <div v-for="usedActionInstance in usedActionsList" :key="usedActionInstance.id">

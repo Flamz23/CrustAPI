@@ -6,14 +6,14 @@
     >
       <div class="pl-2 flex">
         <icons class="fill-current text-gray-500 h-full pl-1 pt-1" :iconName="action" />
-        <div class="pl-1 text-gray-400 text-sm">{{ action.name }}</div>
+        <div class="pl-1 text-gray-400 text-sm pt-px">{{ action.name }}</div>
       </div>
 
       <textarea
         type="text"
         v-model="action.data.output"
         v-if="action.type === 'text'"
-        class="m-5 rounded-md focus:outline-none p-2"
+        class="m-2 rounded focus:outline-none p-1 text-xs"
       />
       <!-- models output in workspace array -->
       <input type="range" v-if="action.type === 'range'" name="ed" id="p" />
