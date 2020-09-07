@@ -1,13 +1,18 @@
 <template>
   <div class="flex h-full">
+    <!-- search bar -->
     <div class="inset-y-0 w-64" :class="color.sideBarcolor">
+      <div class="h-20 w-full"></div>
       <div class="flex p-3">
         <input
-          class="mx-auto rounded w-full h-6 px-2 py-4 outline-none focus:border-teal-400 border-2"
+          class="mx-2 rounded w-full h-6 p-4 outline-none shadow-inner placeholder-gray-400"
           type="text"
           placeholder="Search..."
         />
       </div>
+      <!-- filter groups -->
+      <div class="h-3 w-full"></div>
+      <!-- actionholder -->
       <actionHolder />
     </div>
   </div>
@@ -17,11 +22,11 @@
 import actionHolder from "@/components/actionHolder.vue";
 
 export default {
-  name: "SideBar",
+  // name: "SideBar",
   components: {
     actionHolder,
-    //Workspace,
   },
+
   computed: {
     color: function () {
       // colors are now stored in vuex in the cssStoreModule module

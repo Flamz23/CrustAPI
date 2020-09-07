@@ -1,7 +1,14 @@
 <template>
-  <div class="px-12">
-    <div class="bg-gray-400 py-2 my-2 mx-auto w-full rounded-lg hover:shadow-outline">
-      <p class="p-2">{{ action.name }}</p>
+  <div class="px-24">
+    <div
+      class="bg-gray-400 py-2 my-2 mx-auto w-full rounded-md shadow-lg"
+      :class="color.actionHolderColor"
+    >
+      <div class="pl-2 flex">
+        <icons class="fill-current text-gray-500 h-full pl-1 pt-1" :iconName="action" />
+        <div class="pl-1 text-gray-400 text-sm">{{ action.name }}</div>
+      </div>
+
       <textarea
         type="text"
         v-model="action.data.output"
@@ -14,9 +21,17 @@
   </div>
 </template>
 <script>
+import icons from "@/components/icons.vue";
 export default {
+  components: {
+    icons,
+  },
   props: ["action"],
+  computed: {
+    color: function () {
+      // colors are now stored in vuex in the cssStoreModule module
+      return this.$store.getters["cssStoreModule/getColors"];
+    },
+  },
 };
 </script>
-<style>
-</style>

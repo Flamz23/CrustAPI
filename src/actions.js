@@ -64,8 +64,8 @@ const action = [{
     },
 },
 {
-    name: "Seventh Actions",
-    funct: "S_ACTION",
+    name: "Bluetooth",
+    funct: "BLUETOOTH",
     desc: "lorem Ipsum dolor sit amet ci avec le dos les avoir les yeux",
     type: "text",
     id: 7,

@@ -1,23 +1,35 @@
 <template>
   <div>
+    <!-- action holder buttons -->
     <button
-      class="inline-block align-middle py-2 mx-auto overflow-hidden h-12 lg:h-24 w-full px-12 outline-none focus:outline-none hover:bg-gray-400 my-1 rounded-md"
+      class="h-20 w-full mb-3 p-1 rounded focus:outline-none hover:bg-gray-800 shadow hover:"
       :class="color.actionHolderColor"
     >
-      <!-- Change the height of the button to accommodate for smaller screens.-->
-      <div class="mx-auto text-center text-md md:text-lg text-gray-700">{{action.name}}</div>
-      <div class="mx-auto text-gray-500 text-sm w-full hidden lg:flex">{{ action.desc }}</div>
+      <div class="flex pb-1">
+        <icons class="fill-current text-gray-500 h-full pl-1 pt-1" :iconName="action" />
+        <div class="text-sm text-gray-500 pl-1 font-sans" :class="color.textHeader">{{action.name}}</div>
+      </div>
+
+      <div
+        class="mx-auto text-gray-500 text-xs text-left w-full px-4 font-sans line-h"
+      >{{ action.desc }}</div>
     </button>
   </div>
 </template>
 
 <script>
+import icons from "@/components/icons.vue";
+
 export default {
+  components: {
+    icons,
+  },
   props: {
     action: {
       type: Object,
     },
   },
+
   computed: {
     color: function () {
       // colors are now stored in vuex in the cssStoreModule module
@@ -27,3 +39,8 @@ export default {
 };
 </script>
 
+<style>
+.line-h {
+  line-height: 1.2;
+}
+</style>

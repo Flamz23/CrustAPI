@@ -3,7 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'regal-blue': '#243c5a',
+        'mast-gray': '#DDDDDD',
+        'sidebar-gray': '#363740',
+        'action-gray': '#4A5568',
+        'work-gray': '#EAEAEA',
       }
     },
   },

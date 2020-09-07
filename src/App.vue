@@ -12,10 +12,20 @@ export default {};
 
 <style>
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+  .scroll-snap-y {
+    scroll-snap-type: y;
+  }
+}
 
 #nav {
   padding: 30px;

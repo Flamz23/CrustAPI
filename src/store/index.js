@@ -8,9 +8,10 @@ const cssStoreModule = {
   state: {
     // I honestly dont know if this is a good way to do this
     global: {
-      sideBarcolor: 'bg-gray-700',
-      mastColor: 'bg-gray-300',
-      actionHolderColor: 'bg-gray-300'
+      sideBarcolor: 'bg-sidebar-gray',
+      mastColor: 'bg-mast-gray',
+      actionHolderColor: 'bg-action-gray',
+      workspaceColor: 'bg-work-gray'
     }
   },
   getters: {
