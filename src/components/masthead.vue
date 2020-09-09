@@ -22,59 +22,29 @@
           />
         </svg>
       </button>
-      <!-- settings cog wheel -->
-      <svg
-        style="width:24px;height:24px"
-        viewBox="0 0 24 24"
-        class="my-auto mr-2 fill-current text-gray-700"
-        @click="drawer"
-      >
-        <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-      </svg>
-    </div>
-    <!--  Settings Drawer -->
-    <div class="fixed">
-      <!-- transparent overlay -->
-      <div
-        class="fixed top-0 right-0 h-full w-full bg-black opacity-50 overflow-auto ease-in-out transition-all duration-500 z-29"
-        :class="isClosed ? 'hidden' : 'flex'"
-        @click="drawer"
-      ></div>
-      <!-- drawer -->
-      <aside
-        class="transform top-0 right-0 w-3/12 bg-gray-400 fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
-        :class="isClosed ? 'translate-x-full' : '-translate-x-0'"
-      >
-        <button
-          class="bg-blue-500 m-2 focus:outline-none float-right rounded-lg p-1 text-gray-200"
-          @click="drawer()"
-        >close (x)</button>
-        <div class="h-48 w-3/4 overflow-scroll bg-white mx-auto mt-40">setings: {{settings}}</div>
-      </aside>
+      <drawer />
     </div>
   </div>
 </template>
 
 <script>
 import settings from "../../public/.config/settings";
+import drawer from "@/components/drawer.vue";
 import act from "@/actions.js";
 import controller from "@/controller.js";
 
 export default {
   name: "Masthead",
+  components: {
+    drawer,
+  },
   data() {
-    return {
-      isClosed: true,
-      settings: settings,
-    };
+    return {};
   },
 
   methods: {
     run: () => {
       new controller(act);
-    },
-    drawer() {
-      this.isClosed = !this.isClosed;
     },
   },
 
