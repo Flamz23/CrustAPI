@@ -19,7 +19,7 @@
  - ~~make component styles global~~
  - finish setting up controller.js
  - finish up settings vue and tabs
- - Build model ui in figma
+ - ~~Build model ui in figma~~
  - set up app interface based on figma model
  - fix yet another issue with usedAction array (draggable works but state doesn't change)
  - split store modules into separate files
