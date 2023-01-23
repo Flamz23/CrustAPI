@@ -22,19 +22,18 @@
 		"vuedraggable": "^2.24.0",
 		"vuex": "^3.4.0",
 		"win-brightness": "^1.0.0"
-
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-babel": "~4.4.0",
-		"@vue/cli-plugin-eslint": "~4.4.0",
-		"@vue/cli-plugin-router": "~4.4.0",
-		"@vue/cli-plugin-unit-jest": "~4.4.0",
-		"@vue/cli-plugin-vuex": "~4.4.0",
-		"@vue/cli-service": "~4.4.0",
-		"@vue/eslint-config-standard": "^5.1.2",
+		"@vue/cli-plugin-babel": "^5.0.8",
+		"@vue/cli-plugin-eslint": "^5.0.8",
+		"@vue/cli-plugin-router": "^5.0.8",
+		"@vue/cli-plugin-unit-jest": "^5.0.8",
+		"@vue/cli-plugin-vuex": "^5.0.8",
+		"@vue/cli-service": "^5.0.8",
+		"@vue/eslint-config-standard": "^8.0.1",
 		"@vue/test-utils": "^1.0.3",
 		"babel-eslint": "^10.1.0",
-		"electron": "^9.1.2",
+		"electron": "^22.0.3",
 		"electron-devtools-installer": "^3.1.0",
 		"eslint": "^6.7.2",
 		"eslint-plugin-import": "^2.20.2",
@@ -42,8 +41,8 @@
 		"eslint-plugin-promise": "^4.2.1",
 		"eslint-plugin-standard": "^4.0.0",
 		"eslint-plugin-vue": "^6.2.2",
-		"spectron": "^11.0.0",
-		"tailwindcss": "^1.6.0",
+		"spectron": "^10.0.1",
+		"tailwindcss": "^3.2.4",
 		"vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
 		"vue-template-compiler": "^2.6.11"
 	}
