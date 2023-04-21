@@ -41,7 +41,7 @@
 		"eslint-plugin-promise": "^4.2.1",
 		"eslint-plugin-standard": "^4.0.0",
 		"eslint-plugin-vue": "^6.2.2",
-		"spectron": "^10.0.1",
+		"spectron": "^19.0.0",
 		"tailwindcss": "^3.2.4",
 		"vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
 		"vue-template-compiler": "^2.6.11"
